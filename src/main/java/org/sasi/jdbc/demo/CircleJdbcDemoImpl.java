@@ -19,6 +19,7 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Component;
 @Component
 @Scope("session")
+//
 public class CircleJdbcDemoImpl extends JdbcDaoSupport {
 	
 	//private DataSource dataSource;
