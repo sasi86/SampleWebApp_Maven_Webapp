@@ -9,7 +9,7 @@ import javax.faces.bean.SessionScoped;
 import org.sasi.jdbc.demo.CircleJdbcDemoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
+//Sasi K palani
 @Component
 @ManagedBean
 @SessionScoped
