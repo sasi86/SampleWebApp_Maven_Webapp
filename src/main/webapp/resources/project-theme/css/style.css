@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+code, pre {
+    border-radius: 3px;
+    color: #333333;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    font-size: 12px;
+    padding: 0 3px 2px;
+}
