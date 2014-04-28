@@ -7,3 +7,13 @@ code, pre {
     font-size: 12px;
     padding: 0 3px 2px;
 }
+
+body{
+	text-align : center;
+	margin-left: 150px;
+    margin-right: 150px;
+}
+#wrap{
+	text-align : left;
+	/*border: 1px solid black;*/
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+	<h:outputStylesheet library="project-theme" name="css/main-1.0.css" />
+    </h:head>
+ 
+    <h:body>
+   	<header id="top_header">
+		<ui:insert name="header" >
+		  <ui:include src="/pages/template/commonHeader.xhtml" />
+		</ui:insert>
+    </header>
+    
+    <nav id="top_menu">
+    	<ui:insert name="main_nav" >
+		  <ui:include src="/pages/template/commonNav.xhtml" />
+		</ui:insert>
+    </nav>
+	<div id="big_wrapper">
+	    <section id="main_section">
+		  	<ui:insert name="content" >
+		 	  <ui:include src="/pages/template/commonContent.xhtml" />
+		   	</ui:insert>
+	    </section>
+	    
+	    <aside id="side_news">
+	    	<ui:insert name="sideNews" >
+		 	  <ui:include src="/pages/template/commonSideNews.xhtml" />
+		   	</ui:insert>
+	    </aside>
+ 
+	    <footer id="the_footer">
+	    	<ui:insert name="footer" >
+	    	  <ui:include src="/pages/template/commonFooter.xhtml" />
+	    	</ui:insert>
+    	</footer>
+ 
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:body>
+ 
+    	<ui:composition template="/pages/template/commonLayout.xhtml">
+ 			<ui:define name="header">
+ 				<h:graphicImage value="/resources/project-theme/img/stellararrow.jpg" style="height: 150px; float: left; margin-top: -60px;"/>
+ 				<h1 style="font: bold 26px Tahoma; color : #F2E9B0;">Java Tutorial</h1>
+ 			</ui:define>
+    		<ui:define name="content">
+    			<article>
+					<header>
+						<hgroup>
+							<h1>Content Title 1</h1>
+							<h2>Content Sub-title 1</h2>
+						</hgroup>
+					</header>
+					<p>Some content </p>
+					<footer>
+						<p>- Sasi Kumar. </p>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<hgroup>
+							<h1>Content Title 2</h1>
+							<h2>Content Sub-title 2</h2>
+						</hgroup>
+					</header>
+					<p>Some content </p>
+					<footer>
+						<p>- Sasi Kumar. </p>
+					</footer>
+				</article>
+    		</ui:define>
+ 
+			<ui:define name="footer">
+    			<h2>Copyright Sasi Kumar 2014</h2>
+    		</ui:define>
+ 
+    	</ui:composition>
+ 
+    </h:body>
+ 
+</html>
