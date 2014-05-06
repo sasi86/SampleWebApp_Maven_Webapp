@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="derby_server-1398836207394--1484477963" provider="generic" driver="derby_server" name="Derby - db" create-date="1398836207394" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="1527" server="" database="db" url="jdbc:derby://localhost:1527/db;create=false" user="" type="dev"/>
+	</data-source>
+</data-sources>

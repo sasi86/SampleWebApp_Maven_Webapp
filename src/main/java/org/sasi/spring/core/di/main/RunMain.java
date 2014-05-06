@@ -7,12 +7,15 @@ public class RunMain {
 
 	/**
 	 * @param args
+	 * @throws CloneNotSupportedException 
 	 */
-	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("di.xml");
+	public static void main(String[] args) throws CloneNotSupportedException {
+		/*ApplicationContext context = new ClassPathXmlApplicationContext("di.xml");
 		Triangle triangle = context.getBean("triangle", Triangle.class);
-		triangle.draw();
-
+		triangle.draw();*/
+		System.out.println(Singleton.getInstance());
+		System.out.println(Singleton.getInstance().clone());
+		
 	}
 
 }

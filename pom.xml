@@ -9,6 +9,11 @@
 	<packaging>war</packaging>
 	<name>SampleWebApp</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<spring.version>3.1.0.RELEASE</spring.version>
+		<jackson.version>1.9.10</jackson.version>
+		<jstl.version>1.2</jstl.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -27,11 +32,7 @@
 			<version>2.1.7</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>com.sun.el</groupId>
@@ -54,6 +55,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>3.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -117,6 +123,30 @@
 			<version>10.10.1.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>com.fasterxml.jackson</groupId>
+			<artifactId>jackson-parent</artifactId>
+			<version>2.4.1</version>
+			<type>pom</type>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>SampleWebApp</finalName>
@@ -132,4 +162,11 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>http://repo1.maven.org/maven2/com/fasterxml/jackson</url>
+		</repository>
+	</repositories>
 </project>

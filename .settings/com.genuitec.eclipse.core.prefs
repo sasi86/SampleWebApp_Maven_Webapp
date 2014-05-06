@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
-validator.Checked=src/main/webapp/WEB-INF/web.xml
+validator.Checked=src/main/webapp/resources/project-theme/js/jquery-1.11.0.min.js,src/main/webapp/WEB-INF/web.xml
 validator.Unchecked=
