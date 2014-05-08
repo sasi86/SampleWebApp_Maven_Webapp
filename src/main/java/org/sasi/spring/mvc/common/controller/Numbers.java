@@ -1,4 +1,4 @@
-package org.sasi.sprin.mvc.common.controller;
+package org.sasi.spring.mvc.common.controller;
 
 import org.codehaus.jackson.map.annotate.JsonFilter;
 

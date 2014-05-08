@@ -1,4 +1,4 @@
-package org.sasi.sprin.mvc.model;
+package org.sasi.spring.mvc.model;
 
 public class Country {
 	

@@ -1,12 +1,12 @@
-package org.sasi.sprin.mvc.dao;
+package org.sasi.spring.mvc.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.sasi.sprin.mvc.model.City;
-import org.sasi.sprin.mvc.model.Country;
-import org.sasi.sprin.mvc.model.State;
+import org.sasi.spring.mvc.model.City;
+import org.sasi.spring.mvc.model.Country;
+import org.sasi.spring.mvc.model.State;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 

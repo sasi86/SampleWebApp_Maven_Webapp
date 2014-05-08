@@ -1,11 +1,11 @@
-package org.sasi.sprin.mvc.manager;
+package org.sasi.spring.mvc.manager;
 
 import java.util.List;
 
-import org.sasi.sprin.mvc.dao.GeoInfoDAO;
-import org.sasi.sprin.mvc.model.City;
-import org.sasi.sprin.mvc.model.Country;
-import org.sasi.sprin.mvc.model.State;
+import org.sasi.spring.mvc.dao.GeoInfoDAO;
+import org.sasi.spring.mvc.model.City;
+import org.sasi.spring.mvc.model.Country;
+import org.sasi.spring.mvc.model.State;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 @Component

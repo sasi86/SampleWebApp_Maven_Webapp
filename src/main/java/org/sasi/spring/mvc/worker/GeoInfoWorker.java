@@ -1,10 +1,10 @@
-package org.sasi.sprin.mvc.worker;
+package org.sasi.spring.mvc.worker;
 
 import java.util.List;
 
-import org.sasi.sprin.mvc.model.City;
-import org.sasi.sprin.mvc.model.Country;
-import org.sasi.sprin.mvc.model.State;
+import org.sasi.spring.mvc.model.City;
+import org.sasi.spring.mvc.model.Country;
+import org.sasi.spring.mvc.model.State;
 
 public interface GeoInfoWorker {
 	public List<Country> getCountry();

@@ -1,4 +1,4 @@
-package org.sasi.sprin.mvc.common.controller;
+package org.sasi.spring.mvc.common.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,11 +12,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ser.FilterProvider;
 import org.codehaus.jackson.map.ser.impl.SimpleBeanPropertyFilter;
 import org.codehaus.jackson.map.ser.impl.SimpleFilterProvider;
-import org.sasi.sprin.mvc.dao.GeoInfoDAO;
-import org.sasi.sprin.mvc.model.City;
-import org.sasi.sprin.mvc.model.Country;
-import org.sasi.sprin.mvc.model.State;
-import org.sasi.sprin.mvc.worker.GeoInfoWorker;
+import org.sasi.spring.mvc.dao.GeoInfoDAO;
+import org.sasi.spring.mvc.model.City;
+import org.sasi.spring.mvc.model.Country;
+import org.sasi.spring.mvc.model.State;
+import org.sasi.spring.mvc.worker.GeoInfoWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -137,7 +137,7 @@ public class DropDownController{
 		// and then serialize using that filter provider:
 		@SuppressWarnings("deprecation")
 		String json = mapper.filteredWriter(filters).writeValueAsString(n);
-		mapper.generateJsonSchema(Numbers.class).toString();
+		//mapper.generateJsonSchema(Numbers.class).toString();
 		
 		System.out.println(json);
 		return json;

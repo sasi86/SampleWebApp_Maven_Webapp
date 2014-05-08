@@ -1,4 +1,4 @@
-package org.sasi.sprin.mvc.interceptor;
+package org.sasi.spring.mvc.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

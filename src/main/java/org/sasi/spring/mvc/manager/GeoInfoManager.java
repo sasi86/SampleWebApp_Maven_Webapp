@@ -1,10 +1,10 @@
-package org.sasi.sprin.mvc.manager;
+package org.sasi.spring.mvc.manager;
 
 import java.util.List;
 
-import org.sasi.sprin.mvc.model.City;
-import org.sasi.sprin.mvc.model.Country;
-import org.sasi.sprin.mvc.model.State;
+import org.sasi.spring.mvc.model.City;
+import org.sasi.spring.mvc.model.Country;
+import org.sasi.spring.mvc.model.State;
 
 public interface GeoInfoManager {
 	
