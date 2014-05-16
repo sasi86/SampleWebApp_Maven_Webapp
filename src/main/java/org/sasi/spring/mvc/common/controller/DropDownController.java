@@ -15,9 +15,11 @@ import org.codehaus.jackson.map.ser.impl.SimpleFilterProvider;
 import org.sasi.spring.mvc.dao.GeoInfoDAO;
 import org.sasi.spring.mvc.model.City;
 import org.sasi.spring.mvc.model.Country;
+import org.sasi.spring.mvc.model.DropDownModel;
 import org.sasi.spring.mvc.model.State;
 import org.sasi.spring.mvc.worker.GeoInfoWorker;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -26,10 +28,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.SimpleFormController;
 
 @Controller
-
 @RequestMapping("/chooseCity")
 public class DropDownController{
 	
@@ -93,17 +96,12 @@ public class DropDownController{
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {	
-		Country c= new Country();
+	public ModelAndView printWelcome(ModelMap model) {	
+		DropDownModel pageModel = new DropDownModel();
+		ModelAndView modelView = new ModelAndView("dropDown","command",pageModel);
 		model.addAttribute("message", "Spring 3 MVC Ajax populate");
-		/*int id=1;
-		for(int i=1;i<=25;i++){
-			for(int j=1;j<=5;j++)
-				System.out.println("INSERT INTO CITY(CITY_ID,STATE_ID,CITY_NAME) VALUES("+(id++)+","+i+",'"+i+"-CITY-"+j+"');");
-			
-		}*/
-		
-		return "dropDown";
+		modelView.addAllObjects(model);
+		return modelView;
  
 	}
 	
@@ -142,6 +140,18 @@ public class DropDownController{
 		System.out.println(json);
 		return json;
 	}
+	
+	/*@RequestMapping(value="/get/anyFormat/state", method = RequestMethod.GET, produces={"application/xml","application/json"})
+	@ResponseStatus(HttpStatus.OK)
+	public @ResponseBody State getStateAnyFormat(@RequestParam String id,ModelMap model) {
+		if(id!=null && id.equals("Select"))
+			return null;
+		else{
+			State state= geoInfoWorkerImpl.getState(Integer.parseInt(id)).get(0);
+			model.addAttribute("state",state);
+			return state;
+		}
+	}*/
 	
 	public List<Numbers> findNumber(String number){
 		List<Numbers> numbers=new ArrayList<Numbers>();

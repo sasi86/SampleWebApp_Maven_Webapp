@@ -2,7 +2,6 @@ package org.sasi.spring.mvc.worker;
 
 import java.util.List;
 
-import org.sasi.spring.mvc.dao.GeoInfoDAO;
 import org.sasi.spring.mvc.manager.GeoInfoManager;
 import org.sasi.spring.mvc.model.City;
 import org.sasi.spring.mvc.model.Country;

@@ -1,6 +1,9 @@
 package org.sasi.spring.mvc.common.controller;
 
+import java.util.List;
+
 import org.codehaus.jackson.map.annotate.JsonFilter;
+import org.sasi.spring.mvc.model.Country;
 
 
 @JsonFilter("myFilter")
@@ -11,7 +14,7 @@ public class Numbers {
 	private String field1="field1";
 	private String field2;
 	private String field3;
-
+	
 	public String getField1() {
 		return field1;
 	}
