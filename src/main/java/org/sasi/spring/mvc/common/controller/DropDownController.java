@@ -22,8 +22,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -88,21 +90,35 @@ public class DropDownController{
 	 * */
 	
 	@Autowired
-	private GeoInfoWorker geoInfoWorkerImpl;
+	private GeoInfoWorker geoInfoWorker;
 	
 	@ModelAttribute
 	public List<Country> populateCountry(){
-		return geoInfoWorkerImpl.getCountry();
+		return geoInfoWorker.getCountry();
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView printWelcome(ModelMap model) {	
+	public @ResponseBody ModelAndView printWelcome(ModelMap model) {	
 		DropDownModel pageModel = new DropDownModel();
 		ModelAndView modelView = new ModelAndView("dropDown","command",pageModel);
 		model.addAttribute("message", "Spring 3 MVC Ajax populate");
 		modelView.addAllObjects(model);
 		return modelView;
  
+	}
+	
+	@RequestMapping(value="/handleBar" ,method = RequestMethod.GET)
+	public @ResponseBody List<Country> handlebarJSExecution(ModelMap model) {	
+		model.addAttribute("message", "Spring 3 MVC Ajax populate");
+		return geoInfoWorker.getCountry();
+	}
+	
+	@RequestMapping(value="/autoMap" ,method = RequestMethod.GET, headers="Accept=application/json")
+	public @ResponseBody List<Country> autoMap(@RequestBody Country c) {
+		c.getCountryId();
+		c.getCountryName();
+		//model.addAttribute("message", "Spring 3 MVC Ajax populate");
+		return geoInfoWorker.getCountry();
 	}
 	
 
@@ -112,7 +128,7 @@ public class DropDownController{
 		if(id!=null && id.equals("Select"))
 			return null;
 		else
-			return geoInfoWorkerImpl.getState(Integer.parseInt(id));
+			return geoInfoWorker.getState(Integer.parseInt(id));
 	}
 	
 	@RequestMapping(value="/get/city", method = RequestMethod.GET, headers="Accept=application/json")
@@ -120,10 +136,10 @@ public class DropDownController{
 		if(id!=null && id.equals("Select"))
 			return null;
 		else
-			return geoInfoWorkerImpl.getCity(Integer.parseInt(id));
+			return geoInfoWorker.getCity(Integer.parseInt(id));
 	}
 	
-	@RequestMapping(value="/get/json", method = RequestMethod.GET, headers="Accept=application/json")
+	@RequestMapping(value="/get/json", method = RequestMethod.GET, headers="Accept=application/json" )
 	public @ResponseBody String sendFilteredJsonBack(ModelMap model) throws JsonGenerationException, JsonMappingException, IOException {
 		Numbers n = new Numbers();
 		n.setNumber(22);

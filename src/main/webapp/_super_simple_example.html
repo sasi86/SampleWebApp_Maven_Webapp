@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Super Simple Handlebars Example</title>
+
+</head>
+<body>
+
+<script src="libs/handlebars/handlebars.js"></script>
+<script src="libs/jquery/jquery.js"></script>
+
+<div id="content">Loading...</div>
+
+<script>
+
+	$.get("com/jessewarden/handlebarsexample/templates/SimpleTemplate.hbs", 
+		function(data, textStatus, jqXHR)
+		{
+			var templateText = jqXHR.responseText;
+			var compiledTemplate = Handlebars.compile(templateText);
+			var data = {firstName: "Jesse Warden", description: "Uber crackead ready to rock the mic."};
+			var templateHTML = compiledTemplate(data);
+			$('#content').html(templateHTML);
+		});
+
+</script>
+
+</body>
+</html>
